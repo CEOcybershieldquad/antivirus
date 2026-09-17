@@ -2,15 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#070a12">
-  <meta name="description" content="XADON Phone Defense — a premium security command center for devices, identities, threats and guided recovery.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080C0B">
   <meta name="color-scheme" content="dark">
-  <title>XADON Phone Defense — Digital Defense Command Center</title>
+  <meta name="description" content="XADON Phone Defense — inspect links, messages, passwords and files before they cost you something. A working security console, built by Musteqeem.">
+  <meta name="author" content="Musteqeem">
+
+  <meta property="og:title" content="XADON Phone Defense">
+  <meta property="og:description" content="Check the link before you tap it. Link and message inspection, breach lookup, file fingerprinting and a lost-device playbook.">
+  <meta property="og:type" content="website">
+
+  <title>XADON Phone Defense — security console</title>
+
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
   <div id="app"></div>
+
+  <noscript>
+    <div style="max-width:40rem;margin:4rem auto;padding:1.5rem;border:1px solid #2A3A36;border-radius:16px;font-family:system-ui,sans-serif;color:#E7EEEB">
+      <h1 style="margin:0 0 .5rem">JavaScript is switched off</h1>
+      <p style="color:#83968F;line-height:1.6">
+        Every check in this console — link analysis, hashing, encryption — runs in your browser
+        rather than on a server. That is deliberate: your data never leaves the device. It does
+        mean the page needs JavaScript to do anything at all. Turn it on and reload.
+      </p>
+    </div>
+  </noscript>
+
+  <!-- Load order matters: each file registers a global the next one uses. -->
+  <script src="/assets/js/config.js"></script>
+  <script src="/assets/js/engine.js"></script>
+  <script src="/assets/js/store.js"></script>
+  <script src="/assets/js/ui.js"></script>
+  <script src="/assets/js/auth.js"></script>
+  <script src="/assets/js/pages.js"></script>
+  <script src="/assets/js/admin.js"></script>
   <script src="/assets/js/app.js"></script>
 </body>
 </html>
